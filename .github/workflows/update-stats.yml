@@ -1,0 +1,44 @@
+name: Update Profile Stats SVGs
+
+on:
+  schedule:
+    # Runs every 12 hours
+    - cron: "0 */12 * * *"
+  # Allows manual trigger from GitHub Actions tab
+  workflow_dispatch:
+  # Also runs on every push to keep things fresh
+  push:
+    branches: [main, master]
+
+jobs:
+  update-stats:
+    name: Fetch GitHub Data & Update SVGs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run stats updater
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python update_stats.py
+
+      - name: Commit & push updated SVGs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add harsha-stats.svg harsha-langs.svg harsha-trophies.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update profile stats SVGs [skip ci]"
+            git push
+          fi
