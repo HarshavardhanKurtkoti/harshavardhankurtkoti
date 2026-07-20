@@ -2,9 +2,9 @@
 
 <!-- ✨ Animated Banner ✨ -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=8">
-  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=2">
-  <img src="./harsha-banner.svg?v=8" alt="Harshavardhan Kurtkoti — Full Stack & AI Engineer" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=9">
+  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=9">
+  <img src="./harsha-banner.svg?v=9" alt="Harshavardhan Kurtkoti — Full Stack & AI Engineer" width="100%"/>
 </picture>
 
 </div>
