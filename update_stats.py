@@ -91,13 +91,12 @@ def get_stats(token):
         raise RuntimeError("Could not fetch user profile.")
 
     public_repos = user.get("public_repos", 0)
-    total_private_repos = user.get("total_private_repos", 0)
-    total_repos = public_repos + total_private_repos
     followers    = user.get("followers", 0)
 
     print("Fetching repositories for stars & forks...")
     total_stars = 0
     total_forks = 0
+    total_repos = 0
     page = 1
     while True:
         if token:
@@ -108,11 +107,18 @@ def get_stats(token):
         if not repos or not isinstance(repos, list) or len(repos) == 0:
             break
         for r in repos:
+            # We exclude forks to only count original repositories created by the user,
+            # which matches the standard GitHub Creator count.
+            if not r.get("fork"):
+                total_repos += 1
             total_stars += r.get("stargazers_count", 0)
             total_forks += r.get("forks_count", 0)
         if len(repos) < 100:
             break
         page += 1
+
+    if not token or total_repos == 0:
+        total_repos = public_repos
 
     # Fetching commits
     from datetime import datetime
