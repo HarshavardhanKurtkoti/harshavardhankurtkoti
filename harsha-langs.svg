@@ -17,19 +17,19 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <rect x="1" y="1" width="418" height="308" rx="14" fill="#0b1120" stroke="url(#tg)" stroke-width="1.5"/>
 <text x="20" y="34" font-size="16" font-weight="bold" fill="url(#tg)">📊 Top Languages</text>
 <g clip-path="url(#stackc)">
-  <rect x="20.0"  y="58" width="319.6" height="11" fill="#da5b0b"/>
-  <rect x="339.6" y="58" width="30.0" height="11" fill="#f7df1e"/>
-  <rect x="369.6" y="58" width="25.8" height="11" fill="#ff7a59"/>
+  <rect x="20.0"  y="58" width="318.4" height="11" fill="#da5b0b"/>
+  <rect x="338.4" y="58" width="30.0" height="11" fill="#f7df1e"/>
+  <rect x="368.4" y="58" width="27.0" height="11" fill="#ff7a59"/>
   <rect x="395.4" y="58" width="2.7" height="11" fill="#563d7c"/>
 </g>
 
   <g class="row" style="animation-delay:0.90s">
     <circle cx="26" cy="91" r="5" fill="#da5b0b"/>
     <text x="40" y="96" font-size="13" fill="#e2e8f0" font-weight="bold">Jupyter Notebook</text>
-    <text x="396" y="96" text-anchor="end" font-size="13" fill="#da5b0b" font-weight="bold">84.1%</text>
+    <text x="396" y="96" text-anchor="end" font-size="13" fill="#da5b0b" font-weight="bold">83.8%</text>
     <rect x="40" y="104" width="268" height="9" rx="4.5" fill="#1e293b"/>
     <rect class="bar" x="40" y="104" width="0" height="9" rx="4.5" fill="#da5b0b" style="animation-delay:1.05s">
-      <animate attributeName="width" from="0" to="225.4" dur="1.1s" begin="1.05s" fill="freeze" calcMode="spline" keySplines=".2 .8 .3 1"/>
+      <animate attributeName="width" from="0" to="224.6" dur="1.1s" begin="1.05s" fill="freeze" calcMode="spline" keySplines=".2 .8 .3 1"/>
     </rect>
   </g>
   <g class="row" style="animation-delay:1.25s">
@@ -44,10 +44,10 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
   <g class="row" style="animation-delay:1.60s">
     <circle cx="26" cy="175" r="5" fill="#ff7a59"/>
     <text x="40" y="180" font-size="13" fill="#e2e8f0" font-weight="bold">Python</text>
-    <text x="396" y="180" text-anchor="end" font-size="13" fill="#ff7a59" font-weight="bold">6.8%</text>
+    <text x="396" y="180" text-anchor="end" font-size="13" fill="#ff7a59" font-weight="bold">7.1%</text>
     <rect x="40" y="188" width="268" height="9" rx="4.5" fill="#1e293b"/>
     <rect class="bar" x="40" y="188" width="0" height="9" rx="4.5" fill="#ff7a59" style="animation-delay:1.75s">
-      <animate attributeName="width" from="0" to="18.2" dur="1.1s" begin="1.75s" fill="freeze" calcMode="spline" keySplines=".2 .8 .3 1"/>
+      <animate attributeName="width" from="0" to="19.0" dur="1.1s" begin="1.75s" fill="freeze" calcMode="spline" keySplines=".2 .8 .3 1"/>
     </rect>
   </g>
   <g class="row" style="animation-delay:1.95s">

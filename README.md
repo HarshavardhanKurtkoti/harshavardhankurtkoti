@@ -2,9 +2,9 @@
 
 <!-- ✨ Animated Banner ✨ -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=7">
-  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=1">
-  <img src="./harsha-banner.svg?v=7" alt="Harshavardhan Kurtkoti — Full Stack & AI Engineer" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=8">
+  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=2">
+  <img src="./harsha-banner.svg?v=8" alt="Harshavardhan Kurtkoti — Full Stack & AI Engineer" width="100%"/>
 </picture>
 
 </div>
@@ -25,11 +25,11 @@
 
 | 🎌 Project | 💻 Tech | ⭐ |
 |:---|:---:|:---:|
-| [🧠 AI Assistant Engine](https://github.com/HarshavardhanKurtkoti/ai-assistant) | `Python` `PyTorch` | 25 |
-| [🌐 Full Stack Web App](https://github.com/HarshavardhanKurtkoti/full-stack-app) | `React` `Node.js` | 15 |
-| [🤖 Intelligent Scraper API](https://github.com/HarshavardhanKurtkoti/scraper-api) | `Python` `FastAPI` | 10 |
-| [📈 Real-time Analytics Dashboard](https://github.com/HarshavardhanKurtkoti/analytics-dashboard) | `Next.js` `TypeScript` | 8 |
-| [⚡ Machine Learning Pipeline](https://github.com/HarshavardhanKurtkoti/ml-pipeline) | `Python` `Docker` | 5 |
+| [🐼 Panda Sentiment Chat](https://github.com/HarshavardhanKurtkoti/Panda-Chatbot) | `React` `Node.js` `MongoDB` `Docker` | 1 |
+| [🤖 ChaCha Chaudari AI](https://github.com/HarshavardhanKurtkoti/ChaCha-Chaudari) | `FastAPI` `React` `RAG` `LLM` | 0 |
+| [🛡️ Phishing Domain Detection](https://github.com/HarshavardhanKurtkoti/Phising_Domain_Detection) | `Python` `MLOps` `MLflow` `DVC` | 0 |
+| [🚰 Water Portability Predictor](https://github.com/HarshavardhanKurtkoti/Water_Portability) | `FastAPI` `React` `Python` `ML` | 0 |
+| [⚙️ Predictive Maintenance Engine](https://github.com/HarshavardhanKurtkoti/maintainance_ml_proj) | `Python` `Scikit-Learn` `Pandas` | 0 |
 
 <br/>
 
@@ -45,8 +45,8 @@
 
 ### 📊 GitHub Stats & Graphs
 
-<img src="./harsha-stats.svg?v=2" alt="GitHub Stats" height="185"/>
-<img src="./harsha-langs.svg?v=2" alt="Top Languages" height="185"/>
+<img src="./harsha-stats.svg?v=3" alt="GitHub Stats" height="185"/>
+<img src="./harsha-langs.svg?v=3" alt="Top Languages" height="185"/>
 
 <br/><br/>
 
@@ -60,7 +60,7 @@
 <br/><br/>
 
 <!-- 🏆 Trophies (local animated SVG — always loads) -->
-<img src="./harsha-trophies.svg?v=2" alt="Trophies" width="95%"/>
+<img src="./harsha-trophies.svg?v=3" alt="Trophies" width="95%"/>
 
 <br/><br/>
 

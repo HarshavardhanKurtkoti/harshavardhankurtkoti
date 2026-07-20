@@ -45,16 +45,21 @@ DEFAULT_LANG_COLORS = ["#38bdf8","#818cf8","#2dd4bf","#fbbf24","#4ade80"]
 
 def gh_api(path, token):
     url = f"https://api.github.com{path}"
-    req = urllib.request.Request(url, headers={
-        "Authorization": f"token {token}",
+    headers = {
         "Accept": "application/vnd.github.v3+json",
         "User-Agent": "profile-card-updater",
-    })
+    }
+    if token:
+        headers["Authorization"] = f"token {token}"
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req) as resp:
             return json.loads(resp.read().decode())
     except urllib.error.HTTPError as e:
         print(f"  HTTP {e.code} for {path}")
+        if e.code == 403:
+            print("  Warning: Received HTTP 403 (Forbidden). You might have hit the GitHub API rate limit.")
+            print("  To bypass rate limits, generate a Personal Access Token and set it as GITHUB_TOKEN environment variable.")
         return None
 
 
@@ -98,24 +103,33 @@ def get_stats(token):
             break
         page += 1
 
-    print("Fetching commit count for this year via GraphQL...")
+    # Fetching commits
     from datetime import datetime
     year = datetime.utcnow().year
-    gql = f"""
-    {{
-      user(login: "{USERNAME}") {{
-        contributionsCollection(from: "{year}-01-01T00:00:00Z") {{
-          totalCommitContributions
-        }}
-      }}
-    }}
-    """
-    gql_result = gh_graphql(gql, token)
     total_commits = 0
-    if gql_result and "data" in gql_result:
-        total_commits = (gql_result["data"]["user"]
-                         ["contributionsCollection"]
-                         ["totalCommitContributions"])
+
+    if token:
+        print("Fetching commit count for this year via GraphQL...")
+        gql = f"""
+        {{
+          user(login: "{USERNAME}") {{
+            contributionsCollection(from: "{year}-01-01T00:00:00Z") {{
+              totalCommitContributions
+            }}
+          }}
+        }}
+        """
+        gql_result = gh_graphql(gql, token)
+        if gql_result and "data" in gql_result and gql_result.get("data") and gql_result["data"].get("user"):
+            total_commits = (gql_result["data"]["user"]
+                             ["contributionsCollection"]
+                             ["totalCommitContributions"])
+    else:
+        print("No GitHub token. Fetching commit count for this year via REST Search API...")
+        search_path = f"/search/commits?q=author:{USERNAME}+committer-date:>={year}-01-01"
+        search_res = gh_api(search_path, token)
+        if search_res:
+            total_commits = search_res.get("total_count", 0)
 
     # Rank calculation (simple scoring)
     score = (total_commits * 2 + total_stars * 4 + followers * 1 + public_repos * 1)
@@ -171,7 +185,8 @@ def get_languages(token):
 
 def update_stats_svg(path, stats):
     print(f"Updating {path}...")
-    with open(path, "r", encoding="utf-8") as f:
+    template_path = path.replace(".svg", ".template.svg")
+    with open(template_path, "r", encoding="utf-8") as f:
         content = f.read()
     content = content.replace("{{TOTAL_STARS}}",   f"{stats['total_stars']:,}")
     content = content.replace("{{TOTAL_COMMITS}}", f"{stats['total_commits']:,}")
@@ -185,7 +200,8 @@ def update_stats_svg(path, stats):
 
 def update_langs_svg(path, langs):
     print(f"Updating {path}...")
-    with open(path, "r", encoding="utf-8") as f:
+    template_path = path.replace(".svg", ".template.svg")
+    with open(template_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     total_pct = sum(l["pct"] for l in langs)
@@ -239,7 +255,8 @@ def get_rank_label(score_pct):
 
 def update_trophies_svg(path, stats, langs):
     print(f"Updating {path}...")
-    with open(path, "r", encoding="utf-8") as f:
+    template_path = path.replace(".svg", ".template.svg")
+    with open(template_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     def fill(idx, rank, title, desc, bar):
@@ -292,9 +309,9 @@ def main():
     parser.add_argument("--token", default=os.environ.get("GITHUB_TOKEN", ""))
     args = parser.parse_args()
 
-    if not args.token:
-        print("ERROR: No GitHub token found. Set GITHUB_TOKEN env var or use --token.")
-        exit(1)
+    token = args.token
+    if not token:
+        print("No GITHUB_TOKEN found. Running in unauthenticated/public API mode (rate limits may apply).")
 
     base = os.path.dirname(os.path.abspath(__file__))
 
