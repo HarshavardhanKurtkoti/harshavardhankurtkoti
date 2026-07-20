@@ -44,12 +44,10 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <clipPath id="avatarclip"><circle cx="210" cy="412" r="57"/></clipPath>
 </defs>
 
-<circle cx="210" cy="440" r="230" fill="url(#lglow)"><animate attributeName="r" values="230;250;230" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="210" cy="440" r="230" fill="url(#lglow)"><animate attributeName="r" values="230;242;230" dur="5s" repeatCount="indefinite"/></circle>
 
-<g class="tw" style="animation-delay:.5s"><path d="M60 200l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#67e8f9"/></g>
 <g class="tw" style="animation-delay:1.6s"><path d="M372 300l2.4 6.4 6.4 2.4-6.4 2.4-2.4 6.4-2.4-6.4-6.4-2.4 6.4-2.4z" fill="#38bdf8"/></g>
 <g class="tw" style="animation-delay:2.7s"><path d="M52 480l2.4 6.4 6.4 2.4-6.4 2.4-2.4 6.4-2.4-6.4-6.4-2.4 6.4-2.4z" fill="#2dd4bf"/></g>
-<g class="tw" style="animation-delay:1s"><path d="M368 480l2.4 6.4 6.4 2.4-6.4 2.4-2.4 6.4-2.4-6.4-6.4-2.4 6.4-2.4z" fill="#38bdf8" opacity=".8" filter="url(#glow2)"/></g>
 
 <!-- pendulum: settle then sway -->
 <g class="settle"><g class="sway">
@@ -59,7 +57,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
     <path d="M191 -6 L229 -6 L226 236 L194 236 Z" fill="url(#strapg)"/>
     <line x1="196" y1="0" x2="198.5" y2="234" stroke="#fff" stroke-opacity=".55" stroke-width="1" stroke-dasharray="4 3"/>
     <line x1="224" y1="0" x2="221.5" y2="234" stroke="#fff" stroke-opacity=".55" stroke-width="1" stroke-dasharray="4 3"/>
-    <text x="0" y="0" font-size="10.5" font-weight="bold" fill="#fff" opacity=".92" letter-spacing="2" transform="translate(214,18) rotate(90)">HARSHA.DEV &gt;_ FULL STACK &lt;/&gt; AI &gt;_ HARSHA.DEV</text>
+    <text x="0" y="0" font-size="10.5" font-weight="bold" fill="#fff" opacity=".92" letter-spacing="2" transform="translate(214,18) rotate(90)">HARSHA.DEV &gt;_ AI SYSTEMS &lt;/&gt; ENGINEER &gt;_ HARSHA.DEV</text>
   </g>
 
   <!-- Clasp + ring -->
@@ -87,15 +85,15 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
       <g transform="translate(210,516)" fill="url(#nameg2)" filter="url(#glow2)">
         <text x="0" y="0" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="bold" fill="url(#nameg2)">Harshavardhan K.</text>
       </g>
-      <text x="210" y="540" text-anchor="middle" font-size="10.5" fill="#38bdf8" font-weight="bold" letter-spacing="2">FULL STACK &amp; AI ENGINEER</text>
+      <text x="210" y="540" text-anchor="middle" font-size="10.5" fill="#38bdf8" font-weight="bold" letter-spacing="2">AI SYSTEMS ENGINEER</text>
       <text x="210" y="558" text-anchor="middle" font-size="10" fill="#64748b">@HarshavardhanKurtkoti</text>
 
       <line x1="100" y1="572" x2="320" y2="572" stroke="#1e3a5f" stroke-width="1"/>
 
       <!-- barcode + tag -->
       <g transform="translate(100,584)"><rect x="0" y="0" width="2.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="5.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="9.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="12.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="16.0" y="0" width="4" height="26" fill="#e6edf3" opacity=".85"/><rect x="21.5" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="26.0" y="0" width="4" height="26" fill="#e6edf3" opacity=".85"/><rect x="31.5" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="34.5" y="0" width="4" height="26" fill="#e6edf3" opacity=".85"/><rect x="41.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="45.5" y="0" width="2.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="50.5" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="54.5" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="58.5" y="0" width="2.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="63.5" y="0" width="2.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="67.5" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="72.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="76.5" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="81.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="84.0" y="0" width="2.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="89.0" y="0" width="1.5" height="26" fill="#e6edf3" opacity=".85"/><rect x="93.5" y="0" width="4" height="26" fill="#e6edf3" opacity=".85"/></g>
-      <text x="320" y="600" text-anchor="end" font-size="8.5" fill="#64748b">Python • PyTorch</text>
-      <text x="320" y="612" text-anchor="end" font-size="8.5" fill="#64748b">React • TS • AI</text>
+      <text x="320" y="600" text-anchor="end" font-size="8.5" fill="#64748b">FastAPI • AsyncIO • DDD</text>
+      <text x="320" y="612" text-anchor="end" font-size="8.5" fill="#64748b">PyTorch • LangChain • RAG</text>
 
       <!-- holo shine sweep -->
       <rect class="shine" x="82" y="288" width="120" height="360" fill="url(#shineg)"/>

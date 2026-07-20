@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Profile photo placeholder  replace with harsha-profile.jpg">
+<title>Profile photo placeholder</title>
+<defs>
+<style><![CDATA[
+text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:.55}}
+]]></style>
+<linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#38bdf8"/>
+  <stop offset="100%" stop-color="#6366f1"/>
+</linearGradient>
+</defs>
+<circle cx="100" cy="100" r="98" fill="#0b1120" stroke="url(#ring)" stroke-width="2.5"/>
+<circle cx="100" cy="100" r="88" fill="#0f172a"/>
+<circle cx="100" cy="82" r="28" fill="#1e293b"/>
+<path d="M48 158c8-28 28-42 52-42s44 14 52 42" fill="#1e293b"/>
+<rect x="58" y="148" width="84" height="14" rx="7" fill="#1e293b" opacity=".6" style="animation:pulse 3s ease-in-out infinite"/>
+<text x="100" y="186" text-anchor="middle" font-size="8" fill="#64748b" letter-spacing="1">REPLACE: harsha-profile.jpg</text>
+</svg>

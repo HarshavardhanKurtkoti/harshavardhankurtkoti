@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 740" width="1280" height="740" role="img" aria-label="Harshavardhan Kurtkoti - Full Stack &amp; AI Engineer">
-<title>Harshavardhan Kurtkoti — Full Stack &amp; AI Engineer</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 740" width="1280" height="740" role="img" aria-label="Harshavardhan Kurtkoti — AI Systems Engineer">
+<title>Harshavardhan Kurtkoti — AI Systems Engineer</title>
 <defs>
 <style type="text/css"><![CDATA[
 text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
@@ -43,8 +43,8 @@ a:hover text{fill:#0ea5e9}
 <radialGradient id="orbV"><stop offset="0%" stop-color="#2563eb" stop-opacity=".10"/><stop offset="100%" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
 <radialGradient id="orbB"><stop offset="0%" stop-color="#0284c7" stop-opacity=".07"/><stop offset="100%" stop-color="#0284c7" stop-opacity="0"/></radialGradient>
 <radialGradient id="heroGlow"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".10"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
-<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<filter id="glowBig"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="glowBig"><feGaussianBlur stdDeviation="4.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r=".6" fill="rgba(14,165,233,.08)"/></pattern>
 
 <clipPath id="cPrompt"><rect x="48" y="48" width="0" height="32"><animate attributeName="width" from="0" to="480" dur="1s" begin=".3s" fill="freeze"/></rect></clipPath>
@@ -102,7 +102,7 @@ a:hover text{fill:#0ea5e9}
 
 <!-- ================= LEFT: CONTENT ================= -->
 <!-- Terminal prompt -->
-<text clip-path="url(#cPrompt)" x="48" y="69" font-size="14"><tspan fill="#115e59" font-weight="bold">harsha@fullstack-ai-engineer</tspan><tspan fill="#6e7781">:~$ </tspan><tspan fill="#1f2328">cat </tspan><tspan fill="#0ea5e9">README.md</tspan></text>
+<text clip-path="url(#cPrompt)" x="48" y="69" font-size="14"><tspan fill="#115e59" font-weight="bold">harsha@ai-systems-engineer</tspan><tspan fill="#6e7781">:~$ </tspan><tspan fill="#1f2328">cat </tspan><tspan fill="#0ea5e9">README.md</tspan></text>
 <rect x="454" y="56" width="8" height="16" fill="#1a7f37" opacity="0"><animate attributeName="opacity" values="1;0" dur="1s" repeatCount="indefinite" begin="1.35s"/></rect>
 
 <!-- Hi, I'm -->
@@ -115,10 +115,10 @@ a:hover text{fill:#0ea5e9}
 <g class="tw" style="animation-delay:3s"><path d="M650 168l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#0ea5e9" opacity=".95"/></g>
 
 <!-- Cycling roles -->
-<text clip-path="url(#r1)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; Full Stack &amp; AI Engineer /&gt;</text>
-<text clip-path="url(#r2)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; Python &amp; PyTorch Specialist /&gt;</text>
-<text clip-path="url(#r3)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; LLMs &amp; Machine Learning /&gt;</text>
-<text clip-path="url(#r4)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; Modern Web Systems Builder /&gt;</text>
+<text clip-path="url(#r1)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; AI Systems Engineer /&gt;</text>
+<text clip-path="url(#r2)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; Distributed AI • Agents • Runtime /&gt;</text>
+<text clip-path="url(#r3)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; Building Intelligent Infrastructure /&gt;</text>
+<text clip-path="url(#r4)" x="48" y="225" font-size="17" fill="#0ea5e9" filter="url(#glow)">&lt; Production-Grade AI Systems /&gt;</text>
 <rect x="48" y="212" width="2.5" height="16" fill="#0ea5e9" opacity="0"><animate attributeName="opacity" values="1;0" dur=".8s" repeatCount="indefinite" begin="2.9s"/></rect>
 
 <!-- Quote box -->
