@@ -20,14 +20,12 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════
      HERO — Primary identity block. Photo is dominant; lanyard is secondary.
-     Replace harsha-profile-placeholder.svg with ./harsha-profile.jpg when ready.
      ═══════════════════════════════════════════════════════════════════ -->
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="92%">
 <tr>
 <td width="28%" align="center" valign="top">
 
-<!-- Profile photo: swap src to ./harsha-profile.jpg for a real portrait -->
-<img src="./harsha-profile-placeholder.svg?v=2" alt="Harshavardhan Kurtkoti — AI Systems Engineer profile photo" width="180" style="border-radius: 50%; border: 2px solid #38bdf8;"/>
+<img src="./profile.jpg?v=1" alt="Harshavardhan Kurtkoti — AI Systems Engineer profile photo" width="180" style="border-radius: 50%; border: 2px solid #38bdf8; object-fit: cover; aspect-ratio: 1 / 1;"/>
 
 <br/><br/>
 
