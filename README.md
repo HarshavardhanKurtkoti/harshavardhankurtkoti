@@ -5,13 +5,14 @@
 <!-- ✨ Animated Banner (theme + motion preserved) -->
 <div style="position: relative; display: inline-block; width: 100%; max-width: 1280px;">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=12">
-  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=12">
-  <img src="./harsha-banner.svg?v=12" alt="Harshavardhan Kurtkoti — AI Systems Engineer building production-grade intelligent infrastructure" width="100%" style="display: block; width: 100%;"/>
+  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=15">
+  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=15">
+  <img src="./harsha-banner.svg?v=15" alt="Harshavardhan Kurtkoti — AI Systems Engineer building production-grade intelligent infrastructure" width="100%" style="display: block; width: 100%;"/>
 </picture>
-<a href="https://github.com/HarshavardhanKurtkoti" aria-label="GitHub profile" style="position: absolute; top: 94.5%; left: 3.75%; width: 12.7%; height: 5.5%;"></a>
-<a href="mailto:kurtkoti.harsha@gmail.com" aria-label="Email" style="position: absolute; top: 94.5%; left: 16.7%; width: 18.4%; height: 5.5%;"></a>
-<a href="https://www.linkedin.com/in/harshavardhankurtkoti" aria-label="LinkedIn" style="position: absolute; top: 94.5%; left: 35.3%; width: 13.1%; height: 5.5%;"></a>
+<a href="https://github.com/HarshavardhanKurtkoti" aria-label="GitHub profile" style="position: absolute; top: 85.5%; left: 3.75%; width: 23.125%; height: 12%;"></a>
+<a href="mailto:kurtkoti.harsha@gmail.com" aria-label="Email" style="position: absolute; top: 85.5%; left: 26.875%; width: 23.125%; height: 12%;"></a>
+<a href="https://www.linkedin.com/in/harshavardhankurtkoti" aria-label="LinkedIn" style="position: absolute; top: 85.5%; left: 50%; width: 23.125%; height: 12%;"></a>
+<a href="https://portflio-website-azure.vercel.app/" aria-label="Portfolio" style="position: absolute; top: 85.5%; left: 73.125%; width: 23.125%; height: 12%;"></a>
 </div>
 
 </div>
@@ -19,18 +20,23 @@
 <br/>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     HERO — Primary identity block. Photo is dominant; lanyard is secondary.
+     HERO — Primary identity block. Clean circular portrait + summary.
      ═══════════════════════════════════════════════════════════════════ -->
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="92%">
 <tr>
-<td width="28%" align="center" valign="top">
+<td width="240" align="center" valign="top" style="width: 240px;">
 
-<img src="./profile.jpg?v=1" alt="Harshavardhan Kurtkoti — AI Systems Engineer profile photo" width="180" style="border-radius: 50%; border: 2px solid #38bdf8; object-fit: cover; aspect-ratio: 1 / 1;"/>
+<!-- Profile portrait — square wrapper forces a perfect circle (GitHub-safe) -->
+<div align="center">
+  <div style="width: 168px; height: 168px; border-radius: 50%; overflow: hidden; border: 3px solid #ffffff; margin: 0 auto; line-height: 0;">
+    <img src="profile.jpg" alt="Harshavardhan Kurtkoti — AI Systems Engineer profile photo" width="168" height="168" style="width: 168px; height: 168px; max-width: 168px; max-height: 168px; object-fit: cover; object-position: center 18%; display: block; margin: 0; padding: 0; border: 0;"/>
+  </div>
+</div>
 
-<br/><br/>
+<br/>
 
-<!-- Secondary visual — animated ID badge (decorative, not dominant) -->
-<img src="./harsha-lanyard.svg?v=3" alt="Developer ID badge animation" width="200" style="opacity: 0.85;"/>
+<!-- Animated ID lanyard — secondary accent below portrait -->
+<img src="./harsha-lanyard.svg?v=5" alt="Harshavardhan Kurtkoti developer ID badge lanyard" width="200" style="opacity: 0.9; display: block; margin: 0 auto;"/>
 
 </td>
 <td width="72%" valign="top" style="padding-left: 28px;">
@@ -300,19 +306,14 @@ Containerized services, CI/CD, and infrastructure-as-code on AWS.
 <br/>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     CURRENTLY BUILDING — Roadmap timeline
+     CURRENTLY BUILDING — Live roadmap with progress
      ═══════════════════════════════════════════════════════════════════ -->
 <div align="center">
 
 <h2>🚀 Currently Building</h2>
+<p><em>Active systems under development — progress updates as milestones land.</em></p>
 
-```
-Helios AI Runtime          ████████████░░░░  In active development
-Distributed Scheduler      ████████░░░░░░░░  Core runtime module
-Knowledge Engine           ██████░░░░░░░░░░  RAG + memory layer
-Multi-Agent Framework      ████░░░░░░░░░░░░  Agent orchestration
-Deep Research Platform     ████████░░░░░░░░  Research agent v2
-```
+<img src="./harsha-building.svg?v=2" alt="Currently building progress: Helios AI Runtime 72%, Distributed Scheduler 58%, Knowledge Engine 44%, Multi-Agent Framework 51%, Deep Research Platform 86%" width="720"/>
 
 </div>
 
