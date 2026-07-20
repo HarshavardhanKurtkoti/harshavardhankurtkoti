@@ -177,7 +177,7 @@ def get_languages(token):
     page = 1
     while True:
         if token:
-            repos = gh_api(f"/user/repos?affiliation=owner&per_page=100&page={page}", token)
+            repos = gh_api(f"/user/repos?per_page=100&page={page}", token)
         else:
             repos = gh_api(f"/users/{USERNAME}/repos?per_page=100&page={page}", token)
             
