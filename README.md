@@ -33,7 +33,7 @@
 
 <br/>
 
-> 💗 *"Turning complex data & AI into intelligent full-stack solutions."*
+> ⚡ *"Turning complex data & AI into intelligent full-stack solutions."*
 
 </td>
 </tr>
@@ -50,12 +50,12 @@
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=HarshavardhanKurtkoti&theme=radical&hide_border=true&background=170e28&ring=ff7eb6&fire=e879f9&currStreakLabel=c084fc" alt="GitHub Streak"/>
+<img src="https://streak-stats.demolab.com?user=HarshavardhanKurtkoti&theme=dark&background=0b1120&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=38bdf8&sideLabels=94a3b8&dates=64748b&hide_border=true" alt="GitHub Streak"/>
 
 <br/><br/>
 
 <!-- 📈 Contribution Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=HarshavardhanKurtkoti&bg_color=170e28&color=ff7eb6&line=8b5cf6&point=e879f9&area=true&area_color=8b5cf6&hide_border=true&custom_title=Contribution%20Graph%20💗" alt="Contribution graph" width="95%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=HarshavardhanKurtkoti&bg_color=0b1120&color=38bdf8&line=0ea5e9&point=2dd4bf&area=true&area_color=38bdf8&hide_border=true&custom_title=Contribution%20Graph%20🚀" alt="Contribution graph" width="95%"/>
 
 <br/><br/>
 
@@ -66,19 +66,19 @@
 
 ### 🐍 Watch the snake eat my contributions
 
-<img src="https://raw.githubusercontent.com/HarshavardhanKurtkoti/HarshavardhanKurtkoti/output/github-snake-pink.svg" alt="Contribution snake"/>
+<img src="https://raw.githubusercontent.com/HarshavardhanKurtkoti/HarshavardhanKurtkoti/output/github-snake-blue.svg" alt="Contribution snake"/>
 
 <br/><br/>
 
 ### 📫 Let's Connect
 
-<a href="mailto:kurtkoti.harsha@gmail.com"><img src="https://img.shields.io/badge/Email-ff7eb6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-<a href="https://github.com/HarshavardhanKurtkoti"><img src="https://img.shields.io/badge/GitHub-8b5cf6?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-<a href="https://www.linkedin.com/in/harshavardhankurtkoti"><img src="https://img.shields.io/badge/LinkedIn-e879f9?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:kurtkoti.harsha@gmail.com"><img src="https://img.shields.io/badge/Email-38bdf8?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://github.com/HarshavardhanKurtkoti"><img src="https://img.shields.io/badge/GitHub-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+<a href="https://www.linkedin.com/in/harshavardhankurtkoti"><img src="https://img.shields.io/badge/LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=HarshavardhanKurtkoti&color=ff7eb6&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views"/>
+<img src="https://komarev.com/ghpvc/?username=HarshavardhanKurtkoti&color=38bdf8&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views"/>
 
 <br/><br/>
 

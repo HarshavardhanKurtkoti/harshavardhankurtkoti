@@ -22,7 +22,7 @@ jobs:
           github_user_name: HarshavardhanKurtkoti
           outputs: |
             dist/github-snake.svg?palette=github-dark
-            dist/github-snake-pink.svg?color_snake=#ff7eb6&color_dots=#2d1b4e,#5b2a86,#8b5cf6,#c084fc,#ff7eb6
+            dist/github-snake-blue.svg?color_snake=#38bdf8&color_dots=#0b1120,#0f172a,#1e293b,#38bdf8,#818cf8
 
       - name: Push snake to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
