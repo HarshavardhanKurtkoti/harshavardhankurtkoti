@@ -45,8 +45,8 @@
 
 ### 📊 GitHub Stats & Graphs
 
-<img src="./harsha-stats.svg?v=3" alt="GitHub Stats" height="185"/>
-<img src="./harsha-langs.svg?v=3" alt="Top Languages" height="185"/>
+<img src="./harsha-stats.svg?v=9" alt="GitHub Stats" height="185"/>
+<img src="./harsha-langs.svg?v=9" alt="Top Languages" height="185"/>
 
 <br/><br/>
 
@@ -60,7 +60,7 @@
 <br/><br/>
 
 <!-- 🏆 Trophies (local animated SVG — always loads) -->
-<img src="./harsha-trophies.svg?v=3" alt="Trophies" width="95%"/>
+<img src="./harsha-trophies.svg?v=9" alt="Trophies" width="95%"/>
 
 <br/><br/>
 
