@@ -39,7 +39,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 
 <rect x="1" y="1" width="718" height="318" rx="14" fill="#0b1120" stroke="url(#border)" stroke-width="1.5"/>
 
-<text x="28" y="38" font-size="15" font-weight="bold" fill="url(#border)">? Currently Building</text>
+<text x="28" y="38" font-size="15" font-weight="bold" fill="url(#border)">&#x26A1; Currently Building</text>
 <text x="692" y="38" text-anchor="end" font-size="11" fill="#64748b">in progress</text>
 
 <!-- Helios AI Runtime - 72% -->
