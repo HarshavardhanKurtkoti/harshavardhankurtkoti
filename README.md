@@ -5,13 +5,13 @@
 <!-- ✨ Animated Banner (theme + motion preserved) -->
 <div style="position: relative; display: inline-block; width: 100%; max-width: 1280px;">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=11">
-  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=11">
-  <img src="./harsha-banner.svg?v=11" alt="Harshavardhan Kurtkoti — AI Systems Engineer building production-grade intelligent infrastructure" width="100%" style="display: block; width: 100%;"/>
+  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=12">
+  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=12">
+  <img src="./harsha-banner.svg?v=12" alt="Harshavardhan Kurtkoti — AI Systems Engineer building production-grade intelligent infrastructure" width="100%" style="display: block; width: 100%;"/>
 </picture>
-<a href="https://github.com/HarshavardhanKurtkoti" aria-label="GitHub profile" style="position: absolute; top: 91.9%; left: 3.75%; width: 12.7%; height: 5.4%;"></a>
-<a href="mailto:kurtkoti.harsha@gmail.com" aria-label="Email" style="position: absolute; top: 91.9%; left: 16.7%; width: 18.4%; height: 5.4%;"></a>
-<a href="https://www.linkedin.com/in/harshavardhankurtkoti" aria-label="LinkedIn" style="position: absolute; top: 91.9%; left: 35.3%; width: 13.1%; height: 5.4%;"></a>
+<a href="https://github.com/HarshavardhanKurtkoti" aria-label="GitHub profile" style="position: absolute; top: 94.5%; left: 3.75%; width: 12.7%; height: 5.5%;"></a>
+<a href="mailto:kurtkoti.harsha@gmail.com" aria-label="Email" style="position: absolute; top: 94.5%; left: 16.7%; width: 18.4%; height: 5.5%;"></a>
+<a href="https://www.linkedin.com/in/harshavardhankurtkoti" aria-label="LinkedIn" style="position: absolute; top: 94.5%; left: 35.3%; width: 13.1%; height: 5.5%;"></a>
 </div>
 
 </div>
@@ -27,7 +27,7 @@
 <td width="28%" align="center" valign="top">
 
 <!-- Profile photo: swap src to ./harsha-profile.jpg for a real portrait -->
-<img src="./harsha-profile-placeholder.svg?v=1" alt="Harshavardhan Kurtkoti — AI Systems Engineer profile photo" width="180" style="border-radius: 50%; border: 2px solid #38bdf8;"/>
+<img src="./harsha-profile-placeholder.svg?v=2" alt="Harshavardhan Kurtkoti — AI Systems Engineer profile photo" width="180" style="border-radius: 50%; border: 2px solid #38bdf8;"/>
 
 <br/><br/>
 
