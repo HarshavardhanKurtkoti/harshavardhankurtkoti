@@ -120,12 +120,14 @@ def get_stats(token):
     total_commits = 0
 
     if token:
-        print("Fetching commit count for this year via GraphQL...")
+        print("Fetching contribution count for this year via GraphQL...")
         gql = f"""
         {{
           user(login: "{USERNAME}") {{
             contributionsCollection(from: "{year}-01-01T00:00:00Z") {{
-              totalCommitContributions
+              contributionCalendar {{
+                totalContributions
+              }}
             }}
           }}
         }}
@@ -134,7 +136,8 @@ def get_stats(token):
         if gql_result and "data" in gql_result and gql_result.get("data") and gql_result["data"].get("user"):
             total_commits = (gql_result["data"]["user"]
                              ["contributionsCollection"]
-                             ["totalCommitContributions"])
+                             ["contributionCalendar"]
+                             ["totalContributions"])
     else:
         print("No GitHub token. Fetching commit count for this year via REST Search API...")
         search_path = f"/search/commits?q=author:{USERNAME}+committer-date:>={year}-01-01"
@@ -298,7 +301,7 @@ def update_trophies_svg(path, stats, langs):
     commits = stats["total_commits"]
     com_rank = "SSS" if commits >= 1000 else "SS" if commits >= 500 else "S" if commits >= 200 else "A" if commits >= 50 else "B"
     com_bar  = min(132, round(min(commits, 1000) / 1000 * 132))
-    fill(3, com_rank, "Committer", f"Commits: {commits}", com_bar)
+    fill(3, com_rank, "Committer", f"Contribs: {commits}", com_bar)
 
     # Trophy 4: Followers
     fol = stats["followers"]
