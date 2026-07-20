@@ -120,33 +120,48 @@ def get_stats(token):
     if not token or total_repos == 0:
         total_repos = public_repos
 
-    # Fetching commits
+    # Fetching commits (all-time)
     from datetime import datetime
     year = datetime.utcnow().year
     total_commits = 0
 
     if token:
-        print("Fetching contribution count for this year via GraphQL...")
-        gql = f"""
+        print("Fetching account creation year via GraphQL...")
+        gql_created = f"""
         {{
           user(login: "{USERNAME}") {{
-            contributionsCollection(from: "{year}-01-01T00:00:00Z") {{
-              contributionCalendar {{
-                totalContributions
-              }}
-            }}
+            createdAt
           }}
         }}
         """
-        gql_result = gh_graphql(gql, token)
-        if gql_result and "data" in gql_result and gql_result.get("data") and gql_result["data"].get("user"):
-            total_commits = (gql_result["data"]["user"]
-                             ["contributionsCollection"]
-                             ["contributionCalendar"]
-                             ["totalContributions"])
+        created_result = gh_graphql(gql_created, token)
+        created_year = year  # fallback
+        if created_result and "data" in created_result and created_result["data"].get("user"):
+            created_at = created_result["data"]["user"]["createdAt"]
+            created_year = int(created_at[:4])
+
+        print(f"Fetching all-time contribution count via GraphQL ({created_year}–{year})...")
+        for y in range(created_year, year + 1):
+            gql = f"""
+            {{
+              user(login: "{USERNAME}") {{
+                contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y}-12-31T23:59:59Z") {{
+                  contributionCalendar {{
+                    totalContributions
+                  }}
+                }}
+              }}
+            }}
+            """
+            gql_result = gh_graphql(gql, token)
+            if gql_result and "data" in gql_result and gql_result.get("data") and gql_result["data"].get("user"):
+                total_commits += (gql_result["data"]["user"]
+                                  ["contributionsCollection"]
+                                  ["contributionCalendar"]
+                                  ["totalContributions"])
     else:
         print("No GitHub token. Fetching commit count for this year via REST Search API...")
-        search_path = f"/search/commits?q=author:{USERNAME}+committer-date:>={year}-01-01"
+        search_path = f"/search/commits?q=author:{USERNAME}"
         search_res = gh_api(search_path, token)
         if search_res:
             total_commits = search_res.get("total_count", 0)

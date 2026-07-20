@@ -1,11 +1,16 @@
 <div align="center">
 
 <!-- ✨ Animated Banner ✨ -->
+<div style="position: relative; display: inline-block; width: 100%; max-width: 1280px;">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=9">
-  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=9">
-  <img src="./harsha-banner.svg?v=9" alt="Harshavardhan Kurtkoti — Full Stack & AI Engineer" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="./harsha-banner.svg?v=10">
+  <source media="(prefers-color-scheme: light)" srcset="./harsha-banner-light.svg?v=10">
+  <img src="./harsha-banner.svg?v=10" alt="Harshavardhan Kurtkoti — Full Stack & AI Engineer" width="100%" style="display: block; width: 100%;"/>
 </picture>
+<a href="https://github.com/HarshavardhanKurtkoti" aria-label="GitHub" style="position: absolute; top: 91.9%; left: 3.75%; width: 12.7%; height: 5.4%;"></a>
+<a href="mailto:kurtkoti.harsha@gmail.com" aria-label="Email" style="position: absolute; top: 91.9%; left: 16.7%; width: 18.4%; height: 5.4%;"></a>
+<a href="https://www.instagram.com/__harsha__10__/" aria-label="Instagram" style="position: absolute; top: 91.9%; left: 35.3%; width: 13.1%; height: 5.4%;"></a>
+</div>
 
 </div>
 

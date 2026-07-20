@@ -30,7 +30,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
   </g>
   <g class="row" style="animation-delay:0.72s">
     <text x="24" y="105" font-size="14">💻</text>
-    <text x="52" y="105" font-size="13.5" fill="#94a3b8">Total Contributions:</text>
+    <text x="52" y="105" font-size="13.5" fill="#94a3b8">Total Contributions (All Time):</text>
     <text x="316" y="105" text-anchor="end" font-size="14" font-weight="bold" fill="#38bdf8">{{TOTAL_COMMITS}}</text>
   </g>
   <g class="row" style="animation-delay:0.94s">
