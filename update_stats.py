@@ -80,12 +80,19 @@ def gh_graphql(query, token):
 
 
 def get_stats(token):
-    print("Fetching user profile...")
-    user = gh_api(f"/users/{USERNAME}", token)
+    if token:
+        print("Fetching authenticated user profile...")
+        user = gh_api("/user", token)
+    else:
+        print("Fetching user profile...")
+        user = gh_api(f"/users/{USERNAME}", token)
+        
     if not user:
         raise RuntimeError("Could not fetch user profile.")
 
     public_repos = user.get("public_repos", 0)
+    total_private_repos = user.get("total_private_repos", 0)
+    total_repos = public_repos + total_private_repos
     followers    = user.get("followers", 0)
 
     print("Fetching repositories for stars & forks...")
@@ -93,7 +100,11 @@ def get_stats(token):
     total_forks = 0
     page = 1
     while True:
-        repos = gh_api(f"/users/{USERNAME}/repos?per_page=100&page={page}", token)
+        if token:
+            repos = gh_api(f"/user/repos?affiliation=owner&per_page=100&page={page}", token)
+        else:
+            repos = gh_api(f"/users/{USERNAME}/repos?per_page=100&page={page}", token)
+            
         if not repos or not isinstance(repos, list) or len(repos) == 0:
             break
         for r in repos:
@@ -132,7 +143,7 @@ def get_stats(token):
             total_commits = search_res.get("total_count", 0)
 
     # Rank calculation (simple scoring)
-    score = (total_commits * 2 + total_stars * 4 + followers * 1 + public_repos * 1)
+    score = (total_commits * 2 + total_stars * 4 + followers * 1 + total_repos * 1)
     if score >= 2000:   rank = "S+"
     elif score >= 1000: rank = "S"
     elif score >= 500:  rank = "A+"
@@ -142,6 +153,7 @@ def get_stats(token):
 
     return {
         "public_repos":  public_repos,
+        "total_repos":   total_repos,
         "followers":     followers,
         "total_stars":   total_stars,
         "total_forks":   total_forks,
@@ -155,14 +167,19 @@ def get_languages(token):
     lang_bytes = {}
     page = 1
     while True:
-        repos = gh_api(f"/users/{USERNAME}/repos?per_page=100&page={page}", token)
+        if token:
+            repos = gh_api(f"/user/repos?affiliation=owner&per_page=100&page={page}", token)
+        else:
+            repos = gh_api(f"/users/{USERNAME}/repos?per_page=100&page={page}", token)
+            
         if not repos or not isinstance(repos, list) or len(repos) == 0:
             break
         for repo in repos:
             if repo.get("fork"):
                 continue  # skip forks
             name = repo["name"]
-            langs = gh_api(f"/repos/{USERNAME}/{name}/languages", token)
+            owner = repo["owner"]["login"]
+            langs = gh_api(f"/repos/{owner}/{name}/languages", token)
             if langs:
                 for lang, b in langs.items():
                     lang_bytes[lang] = lang_bytes.get(lang, 0) + b
@@ -190,7 +207,7 @@ def update_stats_svg(path, stats):
         content = f.read()
     content = content.replace("{{TOTAL_STARS}}",   f"{stats['total_stars']:,}")
     content = content.replace("{{TOTAL_COMMITS}}", f"{stats['total_commits']:,}")
-    content = content.replace("{{PUBLIC_REPOS}}",  f"{stats['public_repos']:,}")
+    content = content.replace("{{TOTAL_REPOS}}",    f"{stats['total_repos']:,}")
     content = content.replace("{{FOLLOWERS}}",     f"{stats['followers']:,}")
     content = content.replace("{{TOTAL_FORKS}}",   f"{stats['total_forks']:,}")
     content = content.replace("{{RANK}}",          stats["rank"])
@@ -290,7 +307,7 @@ def update_trophies_svg(path, stats, langs):
     fill(4, fol_rank, "Influencer", f"Followers: {fol}", fol_bar)
 
     # Trophy 5: Repos
-    repos = stats["public_repos"]
+    repos = stats["total_repos"]
     rep_rank = "SSS" if repos >= 50 else "S" if repos >= 20 else "A" if repos >= 10 else "B"
     rep_bar  = min(132, round(min(repos, 50) / 50 * 132))
     fill(5, rep_rank, "Creator", f"Repos: {repos}", rep_bar)
@@ -310,17 +327,34 @@ def main():
     args = parser.parse_args()
 
     token = args.token
+    base = os.path.dirname(os.path.abspath(__file__))
+
+    # Automatically load GITHUB_TOKEN or PERSONAL_ACCESS_TOKEN from local .env if not set
+    if not token:
+        env_path = os.path.join(base, ".env")
+        if os.path.exists(env_path):
+            with open(env_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip()
+                        v = v.strip().strip("'\"")
+                        if k in ("GITHUB_TOKEN", "PERSONAL_ACCESS_TOKEN"):
+                            token = v
+                            break
+
     if not token:
         print("No GITHUB_TOKEN found. Running in unauthenticated/public API mode (rate limits may apply).")
-
-    base = os.path.dirname(os.path.abspath(__file__))
+    else:
+        print("GITHUB_TOKEN loaded successfully.")
 
     print("=" * 50)
     print(f"Fetching data for: {USERNAME}")
     print("=" * 50)
 
-    stats = get_stats(args.token)
-    langs = get_languages(args.token)
+    stats = get_stats(token)
+    langs = get_languages(token)
 
     print("\n--- Stats ---")
     for k, v in stats.items():
